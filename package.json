@@ -9,6 +9,9 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^5.4.3"
+    "@astrojs/vercel": "^8.0.4",
+    "@tailwindcss/vite": "^4.0.13",
+    "astro": "^5.5.2",
+    "tailwindcss": "^4.0.13"
   }
 }
