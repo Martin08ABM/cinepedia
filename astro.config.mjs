@@ -1,6 +1,7 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import tailwindcss from "@tailwindcss/vite";
+import partytown from '@astrojs/partytown';
 
 import vercel from '@astrojs/vercel';
 
@@ -11,4 +12,5 @@ export default defineConfig({
     },
     output: 'server',
     adapter: vercel(),
+    integrations: [partytown()],
 });
