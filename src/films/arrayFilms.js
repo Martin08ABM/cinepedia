@@ -1,5 +1,35 @@
 export const peliculas = [
     {
+      title: "Hasta el Último Hombre",
+      category: "Guerra",
+      image: "../../public/Films-Images/hasta-el-ultimo-hombre.jpeg",
+    },
+    {
+      title: "American Sniper",
+      category: "Guerra",
+      image: "../../public/Films-Images/american-snipr.jpeg",
+    },
+    {
+      title: "Salvar al soldado Ryan",
+      category: "Guerra",
+      image: "../../public/Films-Images/salvar-al-soldado-ryan.jpeg",
+    },
+    {
+      title: "Dunkerque",
+      category: "Guerra",
+      image: "../../public/Films-Images/dunkerque.jpg",
+    },
+    {
+      title: "El Padrino",
+      category: "Crimen",
+      image: "../../public/Films-Images/el-padrino.jpg",
+    },
+    {
+      title: "El irlandés",
+      category: "Crimen",
+      image: "../../public/Films-Images/el-irlandes.jpeg",
+    },
+    {
       title: "Misión Imposible: Fallout",
       category: "Acción",
       image: "../../public/Films-Images/mision-imposible_fallout.jpeg",
@@ -128,10 +158,5 @@ export const peliculas = [
       title: "El teléfono negro",
       category: "Terror",
       image: "../../public/Films-Images/el-telefono-negro.jpeg"
-    },
-    {
-      title: "It",
-      category: "Terror",
-      image: "../../public/Films-Images/it.jpeg"
     },
   ];
