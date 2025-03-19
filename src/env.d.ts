@@ -1,3 +1,10 @@
-interface Window {
-    dataLayer: any[];
+// Module: env
+// Module: supabase
+interface ImportMetaEnv {
+    readonly PUBLIC_SUPABASE_URL: string
+    readonly PUBLIC_SUPABASE_KEY: string
+}
+
+interface ImportMeta {
+    readonly env: ImportMetaEnv
 }

@@ -11,12 +11,10 @@
   "dependencies": {
     "@astrojs/partytown": "^2.1.4",
     "@astrojs/vercel": "^8.0.4",
+    "@supabase/supabase-js": "^2.49.1",
     "@tailwindcss/vite": "^4.0.13",
     "@vercel/analytics": "^1.5.0",
     "astro": "^5.5.2",
     "tailwindcss": "^4.0.13"
-  },
-  "devDependencies": {
-    "@types/gtag.js": "^0.0.20"
   }
 }
