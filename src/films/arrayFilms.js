@@ -2,12 +2,12 @@ export const peliculas = [
     {
       title: "Hasta el Último Hombre",
       category: "Guerra",
-      image: "../../public/Films-Images/hasta-el-ultimo-hombre.jpeg",
+      image: "/Films-Images/hasta-el-ultimo-hombre.jpeg",
     },
     {
       title: "American Sniper",
       category: "Guerra",
-      image: "../../public/Films-Images/american-snipr.jpeg",
+      image: "/Films-Images/american-snipr.jpeg",
     },
     {
       title: "Salvar al soldado Ryan",
