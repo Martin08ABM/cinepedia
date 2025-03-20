@@ -5,6 +5,10 @@ const title = Astro.props.title;
 // Import components
 import Header from '../../src/components/header.astro';
 import Footer from '../components/footer.astro';
+
+// Vercel analytics
+import Analytics from '@vercel/analytics/astro'
+
 ---
 <!doctype html>
 <html lang="es">
@@ -14,6 +18,7 @@ import Footer from '../components/footer.astro';
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<title>{title}</title>
 		<meta name="description" content="CinePedia es una plataforma para encontrar información sobre películas y series." />
+		<Analytics />
 	</head>
 	<body>
 		<Header />
