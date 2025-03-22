@@ -5,6 +5,8 @@ import partytown from '@astrojs/partytown';
 
 import vercel from '@astrojs/vercel';
 
+import react from '@astrojs/react';
+
 // https://astro.build/config
 export default defineConfig({
     vite: {
@@ -16,5 +18,5 @@ export default defineConfig({
           enabled: true, // set to false when using @vercel/analytics@1.4.0
         },
     }),
-    integrations: [partytown()],
+    integrations: [partytown(), react()],
 });

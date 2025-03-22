@@ -2,36 +2,19 @@
 import "../styles/global.css";
 import Layout from '../layouts/Layout.astro';
 import { peliculas } from "../../src/films/arrayFilms.js";
-
-function limpiarTitulo(titulo) {
-    return titulo
-        .toLowerCase()
-        .replace(/[^a-z0-9]+/g, "-")
-        .replace(/^-|-$/g, "");
-}
-
+import { urlPelicula } from "../../src/pages/subpages/urlFilms.js";
 --- 
 <Layout title="Inicio - CinePedia">
     <main>
-        <div class="mt-6">
-            <h1 class="inline-flex ml-10 text-3xl font-bold">CinePedia <img src="/flecha-correcta.svg" class="w-6 mt-1 ml-2 mr-2"> La enciclopedia del cine</h1>
-        </div>
-        <h2 class="text-2xl font-bold mt-10 ml-16 mb-8">Últimas películas añadidas</h2>
+        <h2 class="text-2xl font-bold mt-6 ml-16 mb-8 ">Las películas que tenemos guardadas:</h2>
         <div class="w-4/5 mx-auto ml-auto mr-auto">
             <section>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-4">
                     {peliculas.map((film) => {
-                        const urlTituloLimpio = limpiarTitulo(film.title);
-                        const urlPelicula = `/peliculas/${urlTituloLimpio}`;
-                    
                         return (
-                            <div class="bg-white shadow-md overflow-hidden border-2 border-black rounded-lg p-3 w-60 cursor-pointer transition-transform duration-300 ease-in-out transform hover:scale-105">
+                            <div class="bg-white shadow-md overflow-hidden border-2 border-black rounded-2xl p-3 w-60 cursor-pointer transition-transform duration-300 ease-in-out transform hover:scale-105" id={film.title}.toLowerCase()>
                                 <a href={urlPelicula}>
-                                    <img
-                                        class="w-auto h-76 align-middle justify-center rounded-2xl"
-                                        src={film.image}
-                                        alt={film.title}
-                                    />
+                                    <img class="w-auto h-76 align-middle justify-center rounded-2xl" src={film.image} alt={film.title}/>
                                     <div class="p-4">
                                         <h3 class="font-bold text-2xl mb-2">{film.title}</h3>
                                         <p class="text-gray-700 text-base">{film.category}</p>

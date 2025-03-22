@@ -10,11 +10,16 @@
   },
   "dependencies": {
     "@astrojs/partytown": "^2.1.4",
+    "@astrojs/react": "^4.2.1",
     "@astrojs/vercel": "^8.0.4",
     "@supabase/supabase-js": "^2.49.1",
     "@tailwindcss/vite": "^4.0.13",
+    "@types/react": "^19.0.12",
+    "@types/react-dom": "^19.0.4",
     "@vercel/analytics": "^1.5.0",
-    "astro": "^5.5.2"
+    "astro": "^5.5.2",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.21",

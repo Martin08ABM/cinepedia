@@ -1,17 +1,23 @@
 ---
-    import "../styles/global.css";
+// Importa los archivos globales
+import "../styles/global.css";
+import { peliculas } from "../films/arrayFilms.js";
+import Search from '../../src/components/Search.jsx';
 ---
 <!-- Header -->
 <header class="w-full h-[6rem] bg-black p-8 inline-flex justify-between items-center">
     <div class="text-white text-3xl font-bold mt-[-0.7rem] ml-5">
-        <a href="/src/pages/index.astro">CinePedia</a>
+        <a href="/">CinePedia | La enciclopedia del cine</a><!-- Name of the app -->
     </div>
-    <div class="mr-30">
-        <search>
-            <form class="flex items">
-                <input type="text" name="Busqueda" id="Busqueda" placeholder="Buscar" class="bg-white rounded-2xl p-1.5 w-50">
-            </form>
-        <search>
+    <div class="mr-30"><!-- Search Bar -->
+        <form class="flex items">
+
+            <Search peliculas={peliculas} client:load/>
+        </form>
+    </div>
+    <!-- Show search bar results -->
+    <div class="p-4">
+        
     </div>
 </header>
 <!-- End Header -->
