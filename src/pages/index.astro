@@ -1,8 +1,7 @@
 ---
 import "../styles/global.css";
 import Layout from '../layouts/Layout.astro';
-import { peliculas } from "../../src/films/arrayFilms.js";
-import { urlPelicula } from "../../src/pages/subpages/urlFilms.js";
+import { peliculas } from "../assets/arrayFilms.js";
 --- 
 <Layout title="Inicio - CinePedia">
     <main>
@@ -13,7 +12,7 @@ import { urlPelicula } from "../../src/pages/subpages/urlFilms.js";
                     {peliculas.map((film) => {
                         return (
                             <div class="bg-white shadow-md overflow-hidden border-2 border-black rounded-2xl p-3 w-60 cursor-pointer transition-transform duration-300 ease-in-out transform hover:scale-105" id={film.title}.toLowerCase()>
-                                <a href={urlPelicula}>
+                                <a href={`/pelicula/${film.title}`} class="block hover:shadow-lg transition-shadow duration-300 ease-in-out">
                                     <img class="w-auto h-76 align-middle justify-center rounded-2xl" src={film.image} alt={film.title}/>
                                     <div class="p-4">
                                         <h3 class="font-bold text-2xl mb-2">{film.title}</h3>
@@ -21,8 +20,8 @@ import { urlPelicula } from "../../src/pages/subpages/urlFilms.js";
                                     </div>
                                 </a>
                             </div>
-                        );
-                    })}
+                        )
+                    })};
                 </div>
             </section>
         </div>

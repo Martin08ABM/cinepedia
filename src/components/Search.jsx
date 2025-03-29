@@ -1,18 +1,20 @@
 // components/Search.jsx
 import React, { useState } from 'react';
 
+
 export default function Search({ peliculas }) {
     const [consulta, setConsulta] = useState('');
     const resultados = buscarPeliculas(consulta, peliculas);
 
     function buscarPeliculas(consulta, peliculas) {
         if (!consulta) {
-            return []; // Devuelve un array vacío si no hay consulta
+            let consulta = []; // Devuelve un array vacío si no hay consulta
+            
         }
 
         const consultaMinusculas = consulta.toLowerCase();
         return peliculas.filter((pelicula) => {
-            if (typeof pelicula.title === 'string') {
+            if (typeof pelicula.title == 'string') {
                     return pelicula.title.toLowerCase().includes(consultaMinusculas);
             }
             return false;
