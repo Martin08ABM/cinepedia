@@ -1,14 +1,33 @@
 ---
     import "../../styles/global.css"
     import Layout from "../../layouts/Layout.astro"
+    import { dunkerque } from "../../assets/sinopsis/dunkerque.js"
 ---
 <Layout title="Dunkerque - CinePedia">
     <main>
-        <h2 class="text-2xl font-bold mt-6 ml-16 mb-8 ">Dunkerque</h2>
-        <div class="w-full mx-auto ml-auto mr-auto">
+        <div class="w-full h-[450px] inline-flex">
+        <img src="/public/Films-Images/dunkerque.jpg" alt="Dunkerque" class="w-auto h-90 align-middle justify-center rounded-2xl ml-14 mt-12">
+        <div class="w-full mx-auto ml-auto mr-auto mt-4">
+            <h2 class="text-2xl font-bold mt-6 ml-16">Dunkerque</h2>
             <section class="flex">
-                <h1 class="text-lg font-bold text-black ml-20 inline-block">Director: <h1 class="mt-0.8 ml-4">Christopher Nolan</h1></h1>
+                <div class="block">
+                    <div class="inline-flex mt-5">
+                        <ul class="inline-block">
+                            <li><h1 class="text-lg font-semibold text-black ml-20">Director: Christopher Nolan</h1></li>
+                            <li><h1 class="text-lg font-semibold text-black ml-20">Año: 2017</h1></li>
+                        </ul>
+                    </div>
+                    <div class="block w-6/8 mt-6">
+                        {dunkerque.map((dunkerque) => {
+                            return (
+                                <h1 class="text-lg font-bold text-black ml-16">Sinopsis:</h1>
+                                <h1 class="text-lg font-light text-black ml-20">{dunkerque.sinopsis}</h1>
+                            )
+                        })}
+                    </div>
+                </div>
             </section>
+        </div>
         </div>
     </main>
 </Layout>
