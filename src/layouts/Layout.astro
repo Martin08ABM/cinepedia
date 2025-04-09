@@ -1,36 +1,31 @@
 ---
-// Var for title change
+// Layout.astro
 const title = Astro.props.title;
-
-// Import components
 import Header from '../../src/components/header.astro';
 import Footer from '../components/footer.astro';
-
-// Vercel analytics
 import Analytics from '@vercel/analytics/astro'
-
 ---
 <!doctype html>
 <html lang="es">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>{title}</title>
-		<meta name="description" content="CinePedia es una plataforma para encontrar información sobre películas y series." />
-		<Analytics />
-	</head>
-	<body>
-		<Header />
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width" />
+	<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{title}</title>
+	<meta name="description" content="CinePedia es una plataforma para encontrar información sobre películas y series." />
+	<Analytics />
+</head>
+<body class="bg-neutral-100 font-sans">
+	<Header />
+		<main>
 			<slot />
-		<Footer />
-	</body>
+		</main>
+	<Footer />
+</body>
 </html>
-
 <style>
-	html,
-	body {
+	html, body {
 		margin: 0;
 		width: 100%;
 		height: 100%;

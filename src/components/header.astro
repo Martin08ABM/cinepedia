@@ -1,36 +1,23 @@
 ---
-// Importa los archivos globales
+// header.astro
 import "../styles/global.css";
 import { peliculas } from "../assets/arrayFilms.js";
 import Search from '../../src/components/Search.jsx';
 ---
-<!-- Header -->
-<header class="w-full h-[6rem] bg-black p-8 inline-flex justify-between items-center">
-    <div class="text-white text-3xl font-bold mt-[-0.7rem] ml-5">
-        <a href="/">CinePedia | La enciclopedia del cine</a><!-- Name of the app -->
+<header class="w-full h-auto bg-black p-6 flex flex-col md:flex-row justify-between items-center">
+    <div class="text-white text-3xl font-bold mb-4 md:mb-0">
+        <a href="/">CinePedia | La enciclopedia del cine</a>
     </div>
-    <div class="mr-30"><!-- Search Bar -->
-        <form class="flex items">
-
-            <Search peliculas={peliculas} client:load/>
+    <div>
+        <form class="flex items-center">
+        <Search peliculas={peliculas} client:load/>
         </form>
     </div>
-    <!-- Show search bar results -->
-    <div class="p-4">
-        
-    </div>
 </header>
-<!-- End Header -->
-<nav class="bg-neutral-900 p-4">
-    <ul class="flex justify-center mb-2">
-        <li class="mr-5">
-            <a href="/" class="text-white mr-40 hover:text-neutral-500">Inicio</a>
-        </li>
-        <li class="mr-5">
-            <a href="/about" class="text-white mr-40 hover:text-neutral-500">Sobre nosotros</a>
-        </li>
-        <li class="mr-5">
-            <a href="/contact" class="text-white hover:text-neutral-500">Contacto</a>
-        </li>
+<nav class="bg-neutral-900 p-3">
+    <ul class="flex justify-center space-x-10">
+        <li><a href="/" class="text-white hover:text-neutral-400">Inicio</a></li>
+        <li><a href="/about" class="text-white hover:text-neutral-400">Sobre nosotros</a></li>
+        <li><a href="/contact" class="text-white hover:text-neutral-400">Contacto</a></li>
     </ul>
 </nav>

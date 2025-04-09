@@ -1,48 +1,39 @@
 ---
-    import "../../styles/global.css"
-    import Layout from "../../layouts/Layout.astro"
-    import { dunkerque } from "../../assets/sinopsis/dunkerque.js"
+import "../../styles/global.css"
+import Layout from "../../layouts/Layout.astro"
+import { dunkerque } from "../../assets/sinopsis/dunkerque.js"
 ---
 <Layout title="Dunkerque - CinePedia">
-    <main>
-        <div class="w-full h-[calc(100vh-0.5rem)] inline-flex">
-            <div class="block ml-18">
-                <img src="/Films-Images/dunkerque.jpg" alt="Dunkerque" class="w-auto h-90 align-middle justify-center rounded-2xl mt-8 ml-18">
-                <div class="inline-flex mt-6">
-                    <div class="border-2 border-lg rounded-2xl w-auto min-w-[10rem] h-auto max-h-[3rem] p-2">
-                        <a href="https://www.primevideo.com/dp/amzn1.dv.gti.e8afa84c-5903-3c19-7f53-a10540d1503c?autoplay=0&ref_=atv_cf_strg_wb" target="_blank" rel="noopener noreferrer">Ver en Prime Video</a>
-                    </div>
-                    <div class="ml-6 border-2 border-lg rounded-2xl w-auto min-w-[10rem] h-auto max-h-[3rem] p-2 alig">
-                        <a href="https://www.movistarplus.es/cine/dunkerque/ficha?tipo=E&id=1455178&origen=GGL&referrer=GGL&utm_campaign=product_feed&utm_medium=aggregator&utm_source=google" target="_blank" rel="noopener noreferrer">Ver en Movistar+</a>
-                    </div>
-                </div>
+    <main class="px-6 py-10 md:flex md:space-x-10">
+        <div class="md:w-1/2 flex flex-col items-center">
+        <img src="/Films-Images/dunkerque.jpg" alt="Dunkerque" class="rounded-2xl w-full max-w-sm shadow-lg">
+        <div class="flex gap-4 mt-6">
+            <a href="https://www.primevideo.com/dp/amzn1.dv.gti.e8afa84c-5903-3c19-7f53-a10540d1503c?autoplay=0&ref_=atv_cf_strg_wb" target="_blank" rel="noopener noreferrer" class="border-2 rounded-2xl px-4 py-2 hover:bg-black hover:text-white transition-all">Ver en Prime Video</a>
+            <a href="https://www.movistarplus.es/cine/dunkerque/ficha?tipo=E&id=1455178&origen=GGL&referrer=GGL&utm_campaign=product_feed&utm_medium=aggregator&utm_source=google" target="_blank" rel="noopener noreferrer" class="border-2 rounded-2xl px-4 py-2 hover:bg-black hover:text-white transition-all">Ver en Movistar+</a>
+        </div>
+        </div>
+
+        <div class="md:w-1/2 mt-10 md:mt-0">
+        <h2 class="text-3xl font-bold mb-4">Dunkerque</h2>
+        <ul class="mb-6">
+            <li class="text-lg font-medium">Director: Christopher Nolan</li>
+            <li class="text-lg font-medium">Año: 2017</li>
+        </ul>
+
+        {dunkerque.map((d) => (
+            <div>
+            <h3 class="text-xl font-bold mb-2">Actores:</h3>
+            <ul class="ml-4 mb-6">
+                <li class="text-base">{d.actor1}</li>
+                <li class="text-base">{d.actor2}</li>
+                <li class="text-base">{d.actor3}</li>
+                <li class="text-base">{d.actor4}</li>
+            </ul>
+
+            <h3 class="text-xl font-bold mb-2">Sinopsis:</h3>
+            <p class="text-base leading-relaxed text-gray-800">{d.sinopsis}</p>
             </div>
-            <div class="w-full mx-auto ml-auto mr-auto mt-4">
-                <h2 class="text-2xl font-bold mt-6 ml-16">Dunkerque</h2>
-                <section class="flex">
-                    <div class="block">
-                        <div class="inline-flex mt-5">
-                            <ul class="inline-block">
-                                <li><h1 class="text-lg font-semibold text-lg ml-20">Director: Christopher Nolan</h1></li>
-                                <li><h1 class="text-lg font-semibold text-lg ml-20">Año: 2017</h1></li>
-                            </ul>
-                        </div>
-                        <div class="block w-6/8 mt-6">
-                            {dunkerque.map((dunkerque) => {
-                                return (
-                                    <h1 class="text-lg font-bold text-lg ml-16">Actores:</h1>
-                                    <h1 class="text-lg text-light ml-18">{dunkerque.actor1}</h1>
-                                    <h1 class="text-lg text-light ml-18">{dunkerque.actor2}</h1>
-                                    <h1 class="text-lg text-light ml-18">{dunkerque.actor3}</h1>
-                                    <h1 class="text-lg text-light ml-18 mb-8">{dunkerque.actor4}</h1>
-                                    <h1 class="text-lg font-bold text-lg ml-16">Sinopsis:</h1>
-                                    <h1 class="text-lg font-light text-lg ml-18">{dunkerque.sinopsis}</h1>
-                                )
-                            })}
-                        </div>
-                    </div>
-                </section>
-            </div>
+        ))}
         </div>
     </main>
 </Layout>
