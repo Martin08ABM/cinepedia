@@ -5,29 +5,44 @@
 ---
 <Layout title="Dunkerque - CinePedia">
     <main>
-        <div class="w-full h-[450px] inline-flex">
-        <img src="/Films-Images/dunkerque.jpg" alt="Dunkerque" class="w-auto h-90 align-middle justify-center rounded-2xl ml-14 mt-12">
-        <div class="w-full mx-auto ml-auto mr-auto mt-4">
-            <h2 class="text-2xl font-bold mt-6 ml-16">Dunkerque</h2>
-            <section class="flex">
-                <div class="block">
-                    <div class="inline-flex mt-5">
-                        <ul class="inline-block">
-                            <li><h1 class="text-lg font-semibold text-black ml-20">Director: Christopher Nolan</h1></li>
-                            <li><h1 class="text-lg font-semibold text-black ml-20">Año: 2017</h1></li>
-                        </ul>
+        <div class="w-full h-[calc(100vh-0.5rem)] inline-flex">
+            <div class="block ml-18">
+                <img src="/Films-Images/dunkerque.jpg" alt="Dunkerque" class="w-auto h-90 align-middle justify-center rounded-2xl mt-8 ml-18">
+                <div class="inline-flex mt-6">
+                    <div class="border-2 border-lg rounded-2xl w-auto min-w-[10rem] h-auto max-h-[3rem] p-2">
+                        <a href="https://www.primevideo.com/dp/amzn1.dv.gti.e8afa84c-5903-3c19-7f53-a10540d1503c?autoplay=0&ref_=atv_cf_strg_wb" target="_blank" rel="noopener noreferrer">Ver en Prime Video</a>
                     </div>
-                    <div class="block w-6/8 mt-6">
-                        {dunkerque.map((dunkerque) => {
-                            return (
-                                <h1 class="text-lg font-bold text-black ml-16">Sinopsis:</h1>
-                                <h1 class="text-lg font-light text-black ml-20">{dunkerque.sinopsis}</h1>
-                            )
-                        })}
+                    <div class="ml-6 border-2 border-lg rounded-2xl w-auto min-w-[10rem] h-auto max-h-[3rem] p-2 alig">
+                        <a href="https://www.movistarplus.es/cine/dunkerque/ficha?tipo=E&id=1455178&origen=GGL&referrer=GGL&utm_campaign=product_feed&utm_medium=aggregator&utm_source=google" target="_blank" rel="noopener noreferrer">Ver en Movistar+</a>
                     </div>
                 </div>
-            </section>
-        </div>
+            </div>
+            <div class="w-full mx-auto ml-auto mr-auto mt-4">
+                <h2 class="text-2xl font-bold mt-6 ml-16">Dunkerque</h2>
+                <section class="flex">
+                    <div class="block">
+                        <div class="inline-flex mt-5">
+                            <ul class="inline-block">
+                                <li><h1 class="text-lg font-semibold text-lg ml-20">Director: Christopher Nolan</h1></li>
+                                <li><h1 class="text-lg font-semibold text-lg ml-20">Año: 2017</h1></li>
+                            </ul>
+                        </div>
+                        <div class="block w-6/8 mt-6">
+                            {dunkerque.map((dunkerque) => {
+                                return (
+                                    <h1 class="text-lg font-bold text-lg ml-16">Actores:</h1>
+                                    <h1 class="text-lg text-light ml-18">{dunkerque.actor1}</h1>
+                                    <h1 class="text-lg text-light ml-18">{dunkerque.actor2}</h1>
+                                    <h1 class="text-lg text-light ml-18">{dunkerque.actor3}</h1>
+                                    <h1 class="text-lg text-light ml-18 mb-8">{dunkerque.actor4}</h1>
+                                    <h1 class="text-lg font-bold text-lg ml-16">Sinopsis:</h1>
+                                    <h1 class="text-lg font-light text-lg ml-18">{dunkerque.sinopsis}</h1>
+                                )
+                            })}
+                        </div>
+                    </div>
+                </section>
+            </div>
         </div>
     </main>
 </Layout>
