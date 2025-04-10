@@ -10,7 +10,7 @@ import { peliculas } from "../assets/arrayFilms.js";
             <section>
                 <div class="grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-3">
                     {peliculas.map((film) => (
-                        <div class="bg-white border border-gray-300 rounded-2xl shadow-lg overflow-hidden transition-transform duration-300 cursor-pointer hover:scale-110">
+                        <div class="bg-white border-2 border-black rounded-2xl shadow-lg overflow-hidden transition-transform duration-300 cursor-pointer hover:scale-110">
                             <a href={`/Films-pages/${film.id}`} class="block">
                                 <img class="w-full h-80 object-cover" src={film.image} alt={film.title} />
                                 <div class="p-4">

@@ -1,0 +1,39 @@
+---
+import "../../styles/global.css"
+import Layout from "../../layouts/Layout.astro"
+import { laLlegada } from "../../assets/sinopsis/la-llegada.js"
+---
+<Layout title="La Llegada - CinePedia">
+    <main class="px-6 py-10 md:flex md:space-x-10">
+        <div class="md:w-1/2 flex flex-col items-center">
+            <img src="/Films-Images/la-llegada.jpg" alt="La Llegada" class="rounded-2xl w-full max-w-sm shadow-lg">
+            <div class="flex gap-4 mt-6">
+                <a href="AQUÍ_VA_EL_ENLACE_DE_PRIME_VIDEO" target="_blank" rel="noopener noreferrer" class="border-2 rounded-2xl px-4 py-2 hover:bg-black hover:text-white transition-all">Ver en Prime Video</a>
+                <a href="AQUÍ_VA_EL_ENLACE_DE_MOVISTAR_PLUS" target="_blank" rel="noopener noreferrer" class="border-2 rounded-2xl px-4 py-2 hover:bg-black hover:text-white transition-all">Ver en Movistar+</a>
+            </div>
+        </div>
+
+        <div class="md:w-1/2 mt-10 md:mt-0">
+            <h2 class="text-3xl font-bold mb-4">La Llegada</h2>
+            <ul class="mb-6">
+                <li class="text-lg font-medium">Director: Denis Villeneuve</li>
+                <li class="text-lg font-medium">Año: 2016</li>
+            </ul>
+
+            {laLlegada.map((d) => (
+                <div>
+                    <h3 class="text-xl font-bold mb-2">Actores:</h3>
+                    <ul class="ml-4 mb-6">
+                        <li class="text-base">{d.actor1}</li>
+                        <li class="text-base">{d.actor2}</li>
+                        <li class="text-base">{d.actor3}</li>
+                        <li class="text-base">{d.actor4}</li>
+                    </ul>
+
+                    <h3 class="text-xl font-bold mb-2">Sinopsis:</h3>
+                    <p class="text-base leading-relaxed text-gray-800">{d.sinopsis}</p>
+                </div>
+            ))}
+        </div>
+    </main>
+</Layout>
